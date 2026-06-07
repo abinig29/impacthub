@@ -1,0 +1,15 @@
+name: Keep API alive
+
+on:
+  schedule:
+    # Every 10 minutes — keeps Render free tier from spinning down (~15 min idle limit)
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping health endpoint
+        run: |
+          curl -fsS --max-time 30 https://impacthub-api-3tx7.onrender.com/api/health
