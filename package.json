@@ -1,7 +1,7 @@
 {
   "name": "impacthub",
   "version": "3.0.0",
-  "description": "ImpactHub — Intelligent Volunteer Management Platform",
+  "description": "ImpactHub \u2014 Intelligent Volunteer Management Platform",
   "private": true,
   "scripts": {
     "install:all": "cd server && npm install && cd ../client && npm install",
@@ -10,5 +10,7 @@
     "build:client": "cd client && npm run build",
     "start:server": "cd server && npm start"
   },
-  "engines": { "node": ">=18.0.0" }
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
